@@ -6,7 +6,7 @@ interface IconProps {
   name: string;
 }
 
-const Icon: React.FunctionComponent<IconProps> = (props) => {
+const Icon: React.FunctionComponent<IconProps> = props => {
   return (
     <span>
       <svg>
