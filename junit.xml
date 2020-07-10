@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="7" failures="0" time="3.474">
+  <testsuite name="classes" errors="0" failures="0" skipped="0" timestamp="2020-07-05T11:09:38" time="0.751" tests="4">
+    <testcase classname="classes 接受一个 className" name="classes 接受一个 className" time="0.002">
+    </testcase>
+    <testcase classname="classes 接受两个 className" name="classes 接受两个 className" time="0">
+    </testcase>
+    <testcase classname="classes 输入中含有 undefined" name="classes 输入中含有 undefined" time="0.001">
+    </testcase>
+    <testcase classname="classes 含有中文" name="classes 含有中文" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="button" errors="0" failures="0" skipped="0" timestamp="2020-07-05T11:09:38" time="0.806" tests="1">
+    <testcase classname="button 是个div" name="button 是个div" time="0.016">
+    </testcase>
+  </testsuite>
+  <testsuite name="icon" errors="0" failures="0" skipped="0" timestamp="2020-07-05T11:09:38" time="1.439" tests="2">
+    <testcase classname="icon should " name="icon should " time="0.01">
+    </testcase>
+    <testcase classname="icon onClick" name="icon onClick" time="0.031">
+    </testcase>
+  </testsuite>
+</testsuites>
