@@ -1,6 +1,6 @@
 {
   "name": "lui",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -14,7 +14,7 @@
     "url": "git+https://github.com/lazy11233/lz-test-2.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "lazy11233",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/lazy11233/lz-test-2/issues"
@@ -52,5 +52,6 @@
   "dependencies": {
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
-  }
+  },
+  "files": ["/dist"]
 }
