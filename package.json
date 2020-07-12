@@ -1,6 +1,6 @@
 {
-  "name": "lui",
-  "version": "0.0.1",
+  "name": "lui888",
+  "version": "0.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -53,5 +53,5 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
-  "files": ["/dist"]
+  "files": ["/dist/**/*"]
 }
