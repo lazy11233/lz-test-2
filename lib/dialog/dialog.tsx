@@ -24,7 +24,7 @@ const Dialog: React.FunctionComponent<Props> = props => {
           <div className={scopedClass('main')}>
             {props.children}
           </div>
-          <div className={scopedClass('bottom')}>
+          <div className={scopedClass('footer')}>
             <button>ok</button>
             <button>cancel</button>
           </div>
