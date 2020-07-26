@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import { Icon } from '../index';
 import { scopedClassMaker } from '../classes';
 import './dialog.scss';
-import button from '../button';
 
 interface Props {
   visible: boolean;
