@@ -1,15 +1,17 @@
-import React from 'react'
-import {scopedClassMaker} from '../classes'
+import React from "react";
+import { scopedClassMaker } from "../../helpers/classes";
 
-const sc = scopedClassMaker('lui-layout')
+const sc = scopedClassMaker("lui-layout");
 
-interface IProps extends React.HTMLAttributes<HTMLElement> {
+interface IProps extends React.HTMLAttributes<HTMLElement> {}
 
-}
+const Aside: React.FunctionComponent<IProps> = (props) => {
+  const { className, children, ...restProps } = props;
+  return (
+    <div className={sc("aside", { extra: className })} {...restProps}>
+      {children}
+    </div>
+  );
+};
 
-const Aside: React.FunctionComponent<IProps> = props => {
-  const {className, ...restProps} = props
-  return <div className={sc('aside', {extra: className})} {...restProps}>x</div>
-}
-
-export default Aside
+export default Aside;

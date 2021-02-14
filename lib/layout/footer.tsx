@@ -1,15 +1,17 @@
-import React from 'react'
-import {scopedClassMaker} from '../classes';
+import React from "react";
+import { scopedClassMaker } from "../../helpers/classes";
 
-const sc = scopedClassMaker('lui-layout')
+const sc = scopedClassMaker("lui-layout");
 
-interface IProps extends React.HtmlHTMLAttributes<HTMLElement> {
+interface IProps extends React.HtmlHTMLAttributes<HTMLElement> {}
 
-}
+const Footer: React.FunctionComponent<IProps> = (props) => {
+  const { className, children, ...restProps } = props;
+  return (
+    <div className={sc("footer", { extra: className })} {...restProps}>
+      {children}
+    </div>
+  );
+};
 
-const Footer: React.FunctionComponent<IProps> = props => {
-  const {className, ...restProps} = props
-  return <div className={sc('footer', {extra: className})} {...restProps}>footer</div>
-}
-
-export default Footer
+export default Footer;
