@@ -11,5 +11,6 @@ describe('classes', () => {
     expect(sc({ x: true, y: true })).toEqual('lui-x lui-y');
     expect(sc({ x: true, y: false })).toEqual('lui-x');
     expect(sc({ x: false, y: false })).toEqual('lui');
+    expect(sc({ x: false, y: false }, { extra: 'my-lui' })).toEqual('my-lui');
   });
 });

@@ -4,35 +4,39 @@ import { HashRouter as Router, Link, Route } from 'react-router-dom';
 import IconExample from './lib/icon/icon.example';
 import DialogExample from './lib/dialog/dialog-example';
 import LayoutExample from './lib/layout/layout.example';
+import Layout from './lib/layout/layout';
+import Header from './lib/layout/header';
+import Aside from './lib/layout/aside';
+import Content from './lib/layout/content';
+import Footer from './lib/layout/footer';
+import FormExample from './lib/form/form.example';
+import './example.scss';
 
 ReactDOM.render(
   <Router>
-    <div>
-      <header>
+    <Layout style={{ border: '1px solid red' }}>
+      <Header>
         <div className="logo">lui</div>
-      </header>
-      <div>
-        <aside>
+      </Header>
+      <Layout>
+        <Aside>
           <h2>组件</h2>
           <ul>
-            <li>
-              <Link to="/icon">Icon</Link>
-            </li>
-            <li>
-              <Link to="/dialog">Dialog</Link>
-            </li>
-            <li>
-              <Link to="/layout">layout</Link>
-            </li>
+            <li><Link to="/icon">Icon</Link></li>
+            <li><Link to="/dialog">Dialog</Link></li>
+            <li><Link to="/layout">layout</Link></li>
+            <li><Link to="/form">form</Link></li>
           </ul>
-        </aside>
-        <main>
-          <Route path='/icon' component={IconExample} />
-          <Route path='/dialog' component={DialogExample} />
-          <Route path='/layout' component={LayoutExample} />
-        </main>
-      </div>
-    </div>
+        </Aside>
+        <Content>
+          <Route path="/icon" component={IconExample} />
+          <Route path="/dialog" component={DialogExample} />
+          <Route path="/layout" component={LayoutExample} />
+          <Route path="/form" component={FormExample} />
+        </Content>
+      </Layout>
+      <Footer>Footer</Footer>
+    </Layout>
   </Router>,
   document.getElementById('root')
 );
