@@ -12,7 +12,6 @@ const FormExample: React.FunctionComponent = () => {
     { name: 'password', label: '密码', input: { type: 'password' } },
   ]);
   const [errors, setErrors] = useState({});
-
   const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     const rules = [
       { key: 'username', required: true },
@@ -32,6 +31,7 @@ const FormExample: React.FunctionComponent = () => {
         value={formData}
         fields={fields}
         errors={errors}
+        labelWidth={100}
         buttons={
           <Fragment>
             <button type="submit">提交</button>

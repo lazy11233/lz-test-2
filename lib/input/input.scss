@@ -1,0 +1,15 @@
+@import "../helper";
+.lui-input {
+  line-height: 22px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 0 2px fade_out($main-color, 1);
+  transition: box-shadow 1s;
+
+  &:focus {
+    outline: none;
+    border: 1px solid $main-color;
+    box-shadow: 0 0 0 2px fade_out($main-color, .5);
+  }
+}
