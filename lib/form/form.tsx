@@ -40,25 +40,30 @@ const Form: React.FunctionComponent<Props> = (props) => {
   };
   return (
     <form onSubmit={handleFormSubmit}>
-      <table>
-        <tbody>
-          {props.fields.map((field, index) => (
-            <tr key={index} className={sc('row')}>
-              <td style={{width: props.labelWidth}}>
-                <span className={sc('label')}>{field.label}</span>
-              </td>
-              <td>
-                <Input
-                  type={field.input.type}
-                  name={field.name}
-                  onChange={handleFormChange.bind(null, field.name)}
-                />
-              </td>
-              <div>{props.errors && props.errors[field.name]}</div>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      {props.fields.map((field, index) => (
+        <div key={index} className={sc('row')}>
+          <span
+            className={sc('label')}
+            style={{
+              width: props.labelWidth,
+            }}
+          >
+            {field.label}
+          </span>
+          <div>
+            <Input
+              type={field.input.type}
+              name={field.name}
+              onChange={handleFormChange.bind(null, field.name)}
+            />
+            <div className={sc('error')}>
+              {props.errors &&
+                props.errors[field.name] &&
+                props.errors[field.name][0]}
+            </div>
+          </div>
+        </div>
+      ))}
       <div>{props.buttons}</div>
     </form>
   );
